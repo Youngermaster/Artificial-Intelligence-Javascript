@@ -1,0 +1,6 @@
+# Things to do
+
+- [] Search how to pass values by reference in Javascript.
+- [] A clear button, it will erase my chat area.
+- [x] A randomize function who decides what to tell in some ocassions
+  e.g. - How are you? - I'm ['Ok', 'fine', 'doing well' ...]. ...

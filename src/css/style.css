@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #1c1c1c;
+    width: 100%;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#text-field {
+    border: 0;
+    outline: 0;
+    width: 90%;
+    height: 100px;
+    font: 50px tahoma;
+    background: #1c1c1c;
+    color: white;
+    opacity: 0.5;
+    border-bottom: 1px solid white;
+    transition: opacity 700ms, color 700ms, border-bottom 700ms;
+}
+
+#text-field:hover {
+    opacity: 1;
+}
+
+#ask-button {
+    border: 0;
+    outline: 0;
+    background: none;
+    color: white;
+    font: 30px existence;
+    cursor: pointer;
+    transition: color 300ms;
+}
+
+#ask-button:hover, #ask-button:focus {
+    color: #1c1c1c;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#chat-area {
+    width: 90%;
+    margin: 20px auto 0px;
+    font: 14px tahoma;
+    color: white;
+}
