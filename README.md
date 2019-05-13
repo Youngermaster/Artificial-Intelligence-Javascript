@@ -1,2 +1,3 @@
-# Artificial-Intelligence-Javascript
-This repository contains a "AI" with the language Javascript
+# Javascript Bot
+
+This repository contains a bot made with Javascript language
