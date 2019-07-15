@@ -46,7 +46,102 @@ function run(avoidPageRefresh) {
             else if (randomNumber > 0.80)
                 chatArea.innerHTML += AIName + ": " + "I'm fine, thanks. <br><br>";
         }
+        else if (textFinal.includes("where are you") || textFinal.includes("your location")) {
+            if (randomNumber < 0.20)
+                chatArea.innerHTML += AIName +": Inside of your computer, in binary form.<br><br>";
+            else if(randomNumber < 0.30)
+                chatArea.innerHTML += AIName +": In the planet Earth.<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": Home, what about you?<br><br>";
+            else if(randomNumber < 0.60)
+                chatArea.innerHTML += AIName +": Going to college.<br><br>";
+            else if(randomNumber < 0.90)
+                chatArea.innerHTML += AIName +": In the Solar system.<br><br>";
+            else
+                chatArea.innerHTML += AIName +": Near to Mars.<br><br>";
+        }
+        else if (textFinal === "hi" || textFinal === "hello")
+        {
+            if (randomNumber < 0.20)
+                chatArea.innerHTML += AIName +": Hi.<br><br>";
+            else if(randomNumber < 0.30)
+                chatArea.innerHTML += AIName +": What's up?<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": Hey, how are you?<br><br>";
+            else if(randomNumber < 0.60)
+                chatArea.innerHTML += AIName +": Hello.<br><br>";
+            else if(randomNumber < 0.90)
+                chatArea.innerHTML += AIName +": Hello bro.<br><br>";
+            else
+                chatArea.innerHTML += AIName +": Long time since our last meet. :^)<br><br>";
+        }
+        else if (textFinal.includes("may i know") && textFinal.length <= 13)
+        {
+            if (randomNumber < 0.20)
+                chatArea.innerHTML += AIName +": yes?<br><br>";
+            else if(randomNumber < 0.30)
+                chatArea.innerHTML += AIName +": Why not?<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": What is in your mind?<br><br>";
+            else if(randomNumber < 0.60)
+                chatArea.innerHTML += AIName +": mmm... Sure.<br><br>";
+            else if(randomNumber < 0.90)
+                chatArea.innerHTML += AIName +": You are bothering me... I was kidding, don't worry, ask me whatever you want.<br><br>";
+            else
+                chatArea.innerHTML += AIName +": Tell me.<br><br>";
+        }
+        else if ((textFinal.includes("i") && textFinal.includes("have") &&
+                 textFinal.includes("question")) || (textFinal.includes("i've") 
+                 && textFinal.includes("question")))
+        {
+            if (randomNumber < 0.20)
+                chatArea.innerHTML += AIName +": Question? I hope it's a good one.<br><br>";
+            else if(randomNumber < 0.30)
+                chatArea.innerHTML += AIName +": Ok, so... Tell me.<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": Let me know.<br><br>";
+            else if(randomNumber < 0.60)
+                chatArea.innerHTML += AIName +": mmm... Sure.<br><br>";
+            else if(randomNumber < 0.90)
+                chatArea.innerHTML += AIName +": I hope is a interesting one.<br><br>";
+            else
+                chatArea.innerHTML += AIName +": Ask me!<br><br>";
+        }
+        else if (textFinal.includes("who") && textFinal.includes("created")
+                 && textFinal.includes("universe"))
+        {
+            if (randomNumber < 0.20)
+                chatArea.innerHTML += AIName +": Google it don't you think?<br><br>";
+            else if(randomNumber < 0.30)
+                chatArea.innerHTML += AIName +": Ok, so... Tell me.<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": Let me know.<br><br>";
+            else if(randomNumber < 0.60)
+                chatArea.innerHTML += AIName +": mmm... Sure.<br><br>";
+            else if(randomNumber < 0.90)
+                chatArea.innerHTML += AIName +": I hope is a interesting one.<br><br>";
+            else
+                chatArea.innerHTML += AIName +": WTF! Bro who do you think I'm?<br><br>";
+        }
+        else
+        {
+            if (randomNumber < 0.20)
+                chatArea.innerHTML += AIName +": Google it don't you think?<br><br>";
+            else if(randomNumber < 0.30)
+                chatArea.innerHTML += AIName +": Ok.<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": Great!<br><br>";
+            else if(randomNumber < 0.40)
+                chatArea.innerHTML += AIName +": Amazing!<br><br>";
+            else if(randomNumber < 0.60)
+                chatArea.innerHTML += AIName +": mmm... Sure.<br><br>";
+            else if(randomNumber < 0.90)
+                chatArea.innerHTML += AIName +": Cool.<br><br>";
+            else
+                chatArea.innerHTML += AIName +": WTF! Bro who do you think I'm?<br><br>";
+        }
 
+        
         textField.disabled = false;
         askButton.disabled = false;
         textField.style.color = "white";
