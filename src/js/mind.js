@@ -7,6 +7,7 @@ const REPLY_DELAY = 800;
 
 var AIName = "AI";
 var userName = "You";
+var AINameAsked = 0;
 
 mainForm.addEventListener('submit', run, false);
 
@@ -123,24 +124,69 @@ function run(avoidPageRefresh) {
             else
                 chatArea.innerHTML += AIName +": WTF! Bro who do you think I'm?<br><br>";
         }
+        else if (textFinal.includes("what") && textFinal.includes("your") && textFinal.includes("name")) {
+            if (AIName === "AI") {
+                chatArea.innerHTML += AIName + ": My name is not defined yet. would you like to set it?<br><br>";
+                AINameAsked = 1;
+            }
+            else
+                chatArea.innerHTML += AIName + ": <------ This is my name. Can't you read?<br><br>";
+        }
+        else if (textFinal.includes("yes") && textFinal.length <= 6) {
+            if (AINameAsked === 1) {
+                AIName = prompt("Enter my name.");
+                chatArea.innerHTML += AIName + ": Ok. I've successfully changed my name.<br><br>";
+                AINameAsked = 0;
+            }
+            else {
+                chatArea.innerHTML += AIName + ": Ok.<br><br>";
+            }
+        }
+        else if (textFinal.includes("what") && textFinal.includes("my") && textFinal.includes("name")) {
+            if (userName == "You") {
+                userName = prompt("I don't know. Could you please tell me?");
+                chatArea.innerHTML += AIName + ": Ok. I'll remember that.<br><br>";
+            }
+            else
+                chatArea.innerHTML += AIName + ": Your name is " + userName +".<br><br>";
+        }
+        else if (textFinal.includes("change") && textFinal.includes("your") && textFinal.includes("name")) {
+            AIName = prompt("Please enter my name.");
+            chatArea.innerHTML += AIName + ": Ok. I've successfully changed my name.<br><br>";
+        }
+        else if (textFinal.includes("change") && textFinal.includes("my") && textFinal.includes("name")) {
+            userName = prompt("Please enter your name");
+            chatArea.innerHTML += AIName + ": Ok. I'll remember that.<br><br>";
+        }
         else
         {
-            if (randomNumber < 0.20)
+            if (randomNumber < 0.10)
+                chatArea.innerHTML += AIName + ": Sorry?<br><br>";
+            else if (randomNumber < 0.15)
+                chatArea.innerHTML += AIName +": Pardon?<br><br>";
+            else if (randomNumber < 0.20)
                 chatArea.innerHTML += AIName +": Google it don't you think?<br><br>";
-            else if(randomNumber < 0.30)
+            else if (randomNumber < 0.25)
+                chatArea.innerHTML += AIName +": why?<br><br>";
+            else if (randomNumber < 0.30)
                 chatArea.innerHTML += AIName +": Ok.<br><br>";
-            else if(randomNumber < 0.40)
+            else if (randomNumber < 0.35)
+                chatArea.innerHTML += AIName +": " + textTrimmed +"? What do you mean by that?<br><br>";
+            else if (randomNumber < 0.40)
                 chatArea.innerHTML += AIName +": Great!<br><br>";
-            else if(randomNumber < 0.40)
+            else if (randomNumber < 0.45)
+                chatArea.innerHTML += AIName +": Use english, please. :-)<br><br>";
+            else if (randomNumber < 0.50)
                 chatArea.innerHTML += AIName +": Amazing!<br><br>";
-            else if(randomNumber < 0.60)
+            else if (randomNumber < 0.60)
                 chatArea.innerHTML += AIName +": mmm... Sure.<br><br>";
+            else if (randomNumber < 0.75)
+                chatArea.innerHTML += AIName +": Perhaps, what do you think about it?<br><br>";
             else if(randomNumber < 0.90)
                 chatArea.innerHTML += AIName +": Cool.<br><br>";
             else
                 chatArea.innerHTML += AIName +": WTF! Bro who do you think I'm?<br><br>";
         }
-
         
         textField.disabled = false;
         askButton.disabled = false;
@@ -151,12 +197,12 @@ function run(avoidPageRefresh) {
 }
 
 function correct_words(word) {
-
     word = word.replace("mayi", "may i");
     word = word.replace("couldi", "could i");
     word = word.replace("cani", "can i");
     word = word.replace("aweosme", "awesome");
     word = word.replace("univese", "universe");
-    word = word.replace("satuday", "saturday");    
+    word = word.replace("satuday", "saturday");
+    word = word.replace("moday", "monday");
+    word = word.replace("mobday", "monday");
 }
-
